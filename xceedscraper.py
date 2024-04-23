@@ -47,16 +47,16 @@ def update_events(events, ev):
     for g in event_data['musicGenres']:
         genre_name = g['name']
         if genre_name not in genres:
-            genres += ';' + genre_name
+            genres += '|' + genre_name
 
     artists = ''
     # Genres of the artists (which do not always define the event's genres)
     for artist in lineup_data:
-        artists += ';' + artist['name']
+        artists += '|' + artist['name']
         for g in artist['musicGenres']:
             genre_name = g['name']
             if genre_name not in genres:
-                genres += ';' + genre_name
+                genres += '|' + genre_name
 
     new_event['artists'] = artists
     new_event['xceed_genres'] = genres
