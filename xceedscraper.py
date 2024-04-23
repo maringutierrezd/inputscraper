@@ -1,6 +1,5 @@
 import requests
 import time
-import json
 
 # Global variables
 DAY_SECONDS = 24 * 60 * 60
